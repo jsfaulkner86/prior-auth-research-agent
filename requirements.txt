@@ -1,0 +1,13 @@
+# Core Agent Framework
+crewai==0.28.8
+crewai-tools==0.1.6
+
+# LLM
+langchain==0.1.16
+langchain-openai==0.1.3
+openai==1.14.3
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.6.4
+tiktoken==0.6.0
