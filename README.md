@@ -19,6 +19,25 @@ A multi-agent system built with CrewAI that:
 - Identifies likely denial reasons and preemptively addresses them
 - Returns a structured authorization request ready for submission
 
+```mermaid
+flowchart TD
+    A[Prior Auth Request\npatient context · CPT code\ndiagnosis · payer] --> B[Policy Research Agent\nRAG over payer policy docs\nvector search · rerank]
+
+    B -->|Policy requirements retrieved| C[Clinical Justification Agent\ndrafts narrative\npatient context + policy match]
+
+    C -->|Draft justification| D[Denial Risk Agent\nidentifies likely denial reasons\nCO-4 · CO-97 · CO-50\npreemptive rebuttal drafted]
+
+    D -->|Risk-adjusted narrative| E[Output Assembler\nstructured auth request\nCPT · diagnosis · justification\ndenial rebuttals]
+
+    E --> F{Confidence Check}
+    F -->|High confidence| G[✅ Auth Request Ready\nfor submission]
+    F -->|Low confidence| H[🔁 Human Review Flag\nescalate to clinician]
+
+    style G fill:#22c55e,color:#fff
+    style H fill:#f59e0b,color:#fff
+    style E fill:#6B46C1,color:#fff
+```
+
 ## Tech Stack
 
 | Layer | Technology |
