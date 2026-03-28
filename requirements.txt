@@ -11,3 +11,8 @@ openai==1.14.3
 python-dotenv==1.0.1
 pydantic==2.6.4
 tiktoken==0.6.0
+
+# Streamlit
+streamlit>=1.32.0
+
+
