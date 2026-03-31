@@ -1,6 +1,5 @@
 # Core Agent Framework
 crewai==0.63.6
-streamlit>=1.32.0,<2.0.0
 langchain-openai>=0.1.0
 crewai-tools==0.14.0
 
