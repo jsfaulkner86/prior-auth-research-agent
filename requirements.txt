@@ -1,15 +1,14 @@
 # Core Agent Framework
-crewai>=0.51.0,<0.52.0
-crewai-tools>=0.14.0,<0.15.0
+crewai>=0.80.0,<1.0.0
+crewai-tools>=0.20.0,<1.0.0
 
-# LLM — pinned range required by crewai-tools 0.14.x
+# LLM
 langchain>=0.3.0,<0.4.0
 langchain-openai>=0.2.0,<0.3.0
 openai>=1.50.0,<2.0.0
 
-# Pydantic + ChromaDB version lock
+# Pydantic
 pydantic>=2.7.0,<3.0.0
-chromadb==0.4.24
 
 # Utilities
 python-dotenv>=1.0.1,<2.0.0
