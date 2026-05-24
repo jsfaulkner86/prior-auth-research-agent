@@ -39,7 +39,7 @@ async def test_logger_never_raises_without_pool():
 async def test_logger_writes_event():
     logger = PriorAuthAuditLogger(dsn="postgresql://test")
     mock_conn = AsyncMock()
-    mock_pool = AsyncMock()
+    mock_pool = MagicMock()
     mock_pool.acquire.return_value.__aenter__ = AsyncMock(return_value=mock_conn)
     mock_pool.acquire.return_value.__aexit__ = AsyncMock(return_value=False)
     logger._pool = mock_pool
