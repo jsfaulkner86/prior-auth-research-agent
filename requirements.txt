@@ -13,6 +13,7 @@ pydantic>=2.7.0,<3.0.0
 # Utilities
 python-dotenv>=1.0.1,<2.0.0
 tiktoken>=0.7.0,<1.0.0
+asyncpg>=0.29.0,<1.0.0
 
 # Demo UI
 streamlit>=1.32.0,<2.0.0
